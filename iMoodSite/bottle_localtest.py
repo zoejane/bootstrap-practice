@@ -32,7 +32,7 @@ def javascripts(filename):
 def stylesheets(filename):
     return static_file(filename, root='static/css')
 
-@app.get('/<filename:re:.*\.(jpg|png|gif|ico)>')
+@app.get('/<filename:re:.*\.(jpg|png|gif|ico|jpeg)>')
 def images(filename):
     return static_file(filename, root='static/img')
 
