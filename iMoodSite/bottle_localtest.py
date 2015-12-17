@@ -17,6 +17,10 @@ def output():
     flowValue =request.forms.get('flowValue')
     return template('Your flowValue is {{number}}, and your notes are {{notes}}', number = str(flowValue), notes = diaryContent)
 
+from bottle import static_file
+@app.route('/static/header-bg.jpg')
+def server_static(header-bg.jpg):
+    return "static_file(header-bg.jpg, root='static')"
 
 debug(True)
 run(app, host='localhost', port =8080,reloader=True)
