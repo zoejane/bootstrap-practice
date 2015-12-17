@@ -18,9 +18,12 @@ def output():
     return template('Your flowValue is {{number}}, and your notes are {{notes}}', number = str(flowValue), notes = diaryContent)
 
 from bottle import static_file
-@app.route('/static/header-bg.jpg')
-def server_static(header-bg.jpg):
-    return "static_file(header-bg.jpg, root='static')"
+@app.route('/static/<test>')
+def server_static(test):
+    test +=".jpg" 
+    return static_file(test, root='/Users/Zoe/GitHub/bootstrap-practice/iMoodSite/static/')
+ 
+
 
 debug(True)
-run(app, host='localhost', port =8080,reloader=True)
+run(app, host='localhost', port =1234,reloader=True)
