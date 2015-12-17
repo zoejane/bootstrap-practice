@@ -40,6 +40,9 @@ def images(filename):
 def fonts(filename):
     return static_file(filename, root='static/fonts')
 
+@app.route('/index')
+def index():
+    return template('index')
 
 debug(True)
 run(app, host='localhost', port =1234,reloader=True)
