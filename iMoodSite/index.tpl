@@ -36,6 +36,17 @@
     <style type="text/css">
     header {background-image:url(header-bg.jpg)}
 
+    @font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('glyphicons-halflings-regular.eot');
+  src: url('glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('.glyphicons-halflings-regular.woff2') format('woff2'), url('glyphicons-halflings-regular.woff') format('woff'), url('glyphicons-halflings-regular.ttf') format('truetype'), url('glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.glyphicon-shopping-cart:before {
+  content: "\e116";
+}
+
     </style>
 
 </head>
