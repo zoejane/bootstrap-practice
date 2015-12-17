@@ -22,7 +22,23 @@ from bottle import static_file
 def server_static(test):
     test +=".jpg" 
     return static_file(test, root='/Users/Zoe/GitHub/bootstrap-practice/iMoodSite/static/')
- 
+
+# Static Routes
+@app.get('/<filename:re:.*\.js>')
+def javascripts(filename):
+    return static_file(filename, root='static/js')
+
+@app.get('/<filename:re:.*\.css>')
+def stylesheets(filename):
+    return static_file(filename, root='static/css')
+
+@app.get('/<filename:re:.*\.(jpg|png|gif|ico)>')
+def images(filename):
+    return static_file(filename, root='static/img')
+
+@app.get('/<filename:re:.*\.(eot|ttf|woff|svg)>')
+def fonts(filename):
+    return static_file(filename, root='static/fonts')
 
 
 debug(True)
